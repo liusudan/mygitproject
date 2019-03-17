@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!--引入boot的文件，引入顺序有要求-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/product_list.css">
+    <link rel="stylesheet" href="css/footer.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/product_list.js"></script>
+</head>
+<body>
+<header>
+    <div class="container-fluid header-bg">
+        <div class="row">
+            <div class="col-md-3 d-none d-md-block d-lg-block">
+                <ul class="list-unstyled ml-md-3 ">
+                    <li>中文</li>
+                    <li>帮助</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-11 col-10 text-center">
+                <img src="img/header/logo2.png">
+            </div>
+            <div class="col-md-3 d-none d-md-block d-lg-block position-relative">
+                <ul class="list-unstyled d-flex pt-2 justify-content-sm-end">
+                    <li class="mr-2" id="btn_login"><a href="login.html" >登录</a></li>
+                    <li class="mr-2"><a href="cart.html">购物袋</a></li>
+                    <li class="mr-2 search"><a href="javascript:;">搜索</a></li>
+                </ul>
+                <div id='search' class="pt-2">
+                    <input type="text" placeholder="搜素框">
+                    <a href="javascript:;"><img src="img/header/search.png" alt=""></a>
+                </div>
+            </div>
+            <div class="d-md-none" id="item_col"><button class="navbar-light d-md-none"><span class="navbar-toggler-icon"></span></button></div>
+        </div>
+        <div class="d-flex justify-content-md-center b-nav " id="item_show">
+            <ul class="list-unstyled d-md-flex mr-md-5 ul_mg">
+                <li class="bg-li mr-md-4"><a href="index.html">首页</a></li>
+                <li class="bg-li mr-md-4"><a href="product_list.html?lid=">所有宝贝 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2 ml-md-4"><a href="product_list.html?lid=2">连衣裙 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="product_list.html?lid=3">阔腿裤 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="product_list.html?lid=4">连体裤 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="product_list.html?lid=1">套装 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="product_list.html?lid=5">上衣 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">下装 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">配饰</a></li>
+                <li class="bg-li ml-md-5"><a href="javascript:;">品牌故事</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ms_login d-md-none d-lg-none d-flex justify-content-between" style="background: #f7f7f7;height: 30px;text-decoration: none">
+            <div id="btn_login2">
+                <a class="ml-2" href="login.html"><img width="23px"src="img/index/login.png" alt=""/> </a>
+            </div>
+            <div>
+                <a class="mr-2" href="javascript:;"> <img width="23px" src="img/index/cart1.png" alt=""/></a>
+            </div>
+        </div>
+</header>
+<section>
+    <div class="container-fluid">
+        <div class="bg_img"><img src="img/index/title2.jpg" alt="" class=""></div>
+        <div class="main">
+            <div class="bg_mask"></div>
+            <div class="m_content">
+                <div class="m_list">
+                    <div class="row" id="rows_list">
+                        <!--
+                        <div class="col-lg-3 col-md-3 col-6 p-0">
+                            <a class="d-block m_list_a" href="javascript:;"><img class="m_list_img" l_img="img/product_list/d1.jpg " m_img="img/product_list/d1_1.jpg" src="img/product_list/d1.jpg" alt=""/></a>
+                                <div class="m_list_hidden">
+                                    <p class="pr-3 pl-3"><span>SINCE THEN套装 轻熟裙裤装 半糖少女 夏天清新 海边度假风</span><span class="float-right">￥258.00</span></p>
+                                </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-6 p-0">
+                            <a class="d-block m_list_a" href="javascript:;"><img class="m_list_img" l_img="img/product_list/d2.jpg " m_img="img/product_list/d2_2.jpg" src="img/product_list/d2.jpg" alt=""/></a>
+                            <div class="m_list_hidden">
+                                <p class="pr-3 pl-3"><span>SINCE THEN套装 轻熟裙裤装 半糖少女 夏天清新 海边度假风</span><span class="float-right">￥258.00</span></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-6 p-0">
+                            <a class="d-block m_list_a" href="javascript:;"><img class="m_list_img" l_img="img/product_list/d3.jpg " m_img="img/product_list/d3_3.jpg" src="img/product_list/d3.jpg" alt=""/></a>
+                            <div class="m_list_hidden">
+                                <p class="pr-3 pl-3"><span>SINCE THEN套装 轻熟裙裤装 半糖少女 夏天清新 海边度假风</span><span class="float-right">￥258.00</span></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-6 p-0">
+                            <a class="d-block m_list_a" href="javascript:;"><img class="m_list_img" l_img="img/product_list/d4.jpg " m_img="img/product_list/d4_4.jpg" src="img/product_list/d4.jpg" alt=""/></a>
+                            <div class="m_list_hidden">
+                                <p class="pr-3 pl-3"><span>SINCE THEN套装 轻熟裙裤装 半糖少女 夏天清新 海边度假风</span><span class="float-right">￥258.00</span></p>
+                            </div>
+                        </div>-->
+                    </div>
+                
+                    <!--
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-6 p-0">
+                            <a class="d-block m_list_a" href="javascript:;"><img class="m_list_img" l_img="img/product_list/d1.jpg " m_img="img/product_list/d1_1.jpg" src="img/product_list/d1.jpg" alt=""/></a>
+                            <div class="m_list_hidden">
+                                <p class="pr-3 pl-3"><span>套装 轻熟裙裤装</span><span class="float-right">￥258.00</span></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-6 p-0">
+                            <a class="d-block m_list_a" href="javascript:;"><img class="m_list_img" l_img="img/product_list/d2.jpg " m_img="img/product_list/d2_2.jpg" src="img/product_list/d2.jpg" alt=""/></a>
+                            <div class="m_list_hidden">
+                                <p class="pr-3 pl-3"><span>套装 轻熟裙裤装</span><span class="float-right">￥258.00</span></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-6 p-0">
+                            <a class="d-block m_list_a" href="javascript:;"><img class="m_list_img" l_img="img/product_list/d3.jpg " m_img="img/product_list/d3_3.jpg" src="img/product_list/d3.jpg" alt=""/></a>
+                            <div class="m_list_hidden">
+                                <p class="pr-3 pl-3"><span>套装 轻熟裙裤装</span><span class="float-right">￥258.00</span></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-6 p-0">
+                            <a class="d-block m_list_a" href="javascript:;"><img class="m_list_img" l_img="img/product_list/d4.jpg " m_img="img/product_list/d4_4.jpg" src="img/product_list/d4.jpg" alt=""/></a>
+                            <div class="m_list_hidden">
+                                <p class="pr-3 pl-3"><span>套装 轻熟裙裤装</span><span class="float-right">￥258.00</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-6 p-0">
+                            <a class="d-block m_list_a" href="javascript:;"><img class="m_list_img" l_img="img/product_list/d1.jpg " m_img="img/product_list/d1_1.jpg" src="img/product_list/d1.jpg" alt=""/></a>
+                            <div class="m_list_hidden">
+                                <p class="pr-3 pl-3"><span>套装 轻熟裙裤装</span><span class="float-right">￥258.00</span></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-6 p-0">
+                            <a class="d-block m_list_a" href="javascript:;"><img class="m_list_img" l_img="img/product_list/d2.jpg " m_img="img/product_list/d2_2.jpg" src="img/product_list/d2.jpg" alt=""/></a>
+                            <div class="m_list_hidden">
+                                <p class="pr-3 pl-3"><span>套装 轻熟裙裤装</span><span class="float-right">￥258.00</span></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-6 p-0">
+                            <a class="d-block m_list_a" href="javascript:;"><img class="m_list_img" l_img="img/product_list/d3.jpg " m_img="img/product_list/d3_3.jpg" src="img/product_list/d3.jpg" alt=""/></a>
+                            <div class="m_list_hidden">
+                                <p class="pr-3 pl-3"><span>套装 轻熟裙裤装</span><span class="float-right">￥258.00</span></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-6 p-0">
+                            <a class="d-block m_list_a" href="javascript:;"><img class="m_list_img" l_img="img/product_list/d4.jpg " m_img="img/product_list/d4_4.jpg" src="img/product_list/d4.jpg" alt=""/></a>
+                            <div class="m_list_hidden">
+                                <p class="pr-3 pl-3"><span>套装 轻熟裙裤装</span><span class="float-right">￥258.00</span></p>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+                <!--分页
+                <div class="page text-right">
+                    <ul class="pagination pagination-sm float-right mr-3">
+                    <li class="page-item disabled mr-1"><a href="#" class="page-link">上一页</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">下一页</a></li>
+                    </ul>
+                </div>
+                -->
+                <div class="footer-bg pb-5 mt-5">
+                    <div class="container">
+                        <div class="text-center mb-3"><img src="img/footer/logo_g.png" class="img_size "/></div>
+                        <div class="row">
+                            <div class="col-md-9 d-md-flex justify-content-md-between">
+                                <ul class="list-unstyled">
+                                    <li class="li_title" id="fir">专属服务</li>
+                                    <li class="li_d mt-4">免费标准配送</li>
+                                    <li class="li_d">免费礼品包装</li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li class="li_title">购物帮助</li>
+                                    <li class="li_d mt-4">支付相关</li>
+                                    <li class="li_d">配送</li>
+                                    <li class="li_d">退货</li>
+                                    <li class="li_d">发票</li>
+                                    <li class="li_d">保养与维修</li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li class="li_title">关于公司</li>
+                                    <li class="li_d mt-4">关于SINCE THEN</li>
+                                    <li class="li_d">职业发展</li>
+                                    <li class="li_d">细则与条款</li>
+                                    <li class="li_d">隐私与COOKIE</li>
+                                    <li class="li_d">企业信息</li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li class="li_title" >关注我们</li>
+                                    <li class="li_d mt-4"><img src="" alt=""/>微信</li>
+                                    <li class="li_d"><img src="" alt=""/>微博</li>
+                                    <li class="li_d"><img src="" alt=""/>优酷</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="ml-md-5">
+                                    <p class="li_title">订阅电子资讯</p>
+                                    <p class="li_d mt-md-4">通过订阅，即代表您接受本公司的隐私条款</p>
+                                    <input class="li_d" type="text" placeholder="电子邮件地址"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg_up">
+                <p>2019早春</p>
+                <p style="font-size: 38px">套装</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+</footer>
+</body>
+</html>

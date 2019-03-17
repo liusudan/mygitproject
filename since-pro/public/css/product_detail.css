@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background: #333;
+}
+section{
+    position: relative;
+}
+section .detail_img{
+    position: relative;
+    width: 50%;
+    height: 2500px;
+    background: #fff;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    padding-top: 120px;
+}
+
+section .detail_img img{
+    width: 90%;
+}
+section .detail_pro .datail_pro_dt .fix_cart{
+    position: fixed;
+    top:200px;
+    right: 8%;
+    width: 500px;
+    height: 400px;
+    z-index:5;
+}
+section .detail_pro .datail_pro_dt .fix_cart h4{
+    width: 80%;
+    font-weight: 300;
+    font-family:  "PingFangSC-Regular", "Microsoft YaHei", sans-serif;
+    letter-spacing: 1px;
+}
+section .detail_pro .datail_pro_dt .fix_cart .p_price{
+    letter-spacing: 1px;
+    font-size: 22px;
+    font-weight: 300;
+    font-family: "FuturaLT-Light", "NotoSansCJKsc-Light", "NotoSansCJKsc-Normal", "PingFangSC-Regular", "Hiragino Sans GB", "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", sans-serif;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 20px;
+    width: 80%;
+}
+section .detail_pro .datail_pro_dt .fix_cart .p_chose{
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "FuturaLT-Light", "NotoSansCJKsc-Light", "NotoSansCJKsc-Normal", "PingFangSC-Regular", "Hiragino Sans GB", "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", sans-serif;
+}
+section .detail_pro .datail_pro_dt .fix_cart .p_size{
+    display: flex;
+    width: 80%;
+    padding-bottom: 16px;
+}
+section .detail_pro .datail_pro_dt .fix_cart .p_size a{
+    display:block;
+    width: 3rem;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    background: #e2e3e5;
+    color: black;
+    text-align: center;
+    border: 1px solid #888;
+    text-decoration: none;
+}
+section .detail_pro .datail_pro_dt .fix_cart .p_size a.active{
+    background: #fff;
+}
+section .detail_pro .datail_pro_dt .fix_cart input.p_btn{
+    width: 80%;
+    height: 43px;
+    background: #333333;
+    color: #e2e3e5;
+    border: none;
+    border-radius: 3px;
+}
+section .detail_pro .datail_pro_dt .fix_cart .s_icon{
+    margin-top: 6px;
+    width: 80%;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 10px;
+}
+section .detail_pro .datail_pro_dt .fix_cart .s_icon span{
+    padding-top: 10px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "FuturaLT-Light", "NotoSansCJKsc-Light", "NotoSansCJKsc-Normal", "PingFangSC-Regular", "Hiragino Sans GB", "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", sans-serif;
+}
+section .detail_pro .datail_pro_dt .fix_cart .s_icon span.padding_l{
+    padding:0 10px;
+}
+section .detail_pro .datail_pro_dt .fix_cart .s_icon img{
+    width: 26px;
+    padding-right: 6px;
+    vertical-align:bottom;
+    margin-top: 10px;
+}
+section .detail_pro .datail_pro_dt .fix_cart p.p_last{
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+    padding-top: 6px;
+}
+section .detail_pro{
+    position: relative;
+    height: 800px;
+    width: 100%;
+    z-index: 2;
+    top:2500px;
+}
+section .detail_pro .datail_pro_dt{
+    height: 800px;
+    background: rgba(255,255,255,0.9);
+    width: 100%;
+}
+section .detail_pro .datail_pro_dt{
+    margin-bottom: -3rem;
+    position: relative;
+}
+section .detail_pro .datail_pro_dt .detail_ms{
+    width: 50%;
+    height: 400px;
+    margin-top: 60px;
+    margin-left: 4rem;
+}
+section .detail_pro .datail_pro_dt .detail_ms .card .card-header{
+    height: 80px;
+    background: #fff;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    line-height: 50px;
+}
+section .detail_pro .datail_pro_dt .detail_ms .card .p_color{
+    color: #888;
+    background: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+section .detail_pro .datail_pro_dt .detail_ms .card .active_color{
+    color:#333;
+    text-decoration: none;
+    font-size: 12px;
+}
+section .detail_pro .datail_pro_dt .detail_ms .card img.box_img{
+    width: 48%;
+    padding-right: 10px;
+}
+@media  (max-width: 991px) {
+    section .detail_img{
+        width: 100%;
+        margin-left: 1.5rem;
+    }
+    section .detail_pro .datail_pro_dt .detail_ms{
+        width:100%;
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top:500px;
+    }
+    section .detail_pro .datail_pro_dt{
+        height: 1080px;
+    }
+    section .detail_pro .datail_pro_dt .fix_cart{
+        width: 100%;
+        left: 0px;
+        margin-left: 20px;
+        position: absolute;
+    }
+
+}

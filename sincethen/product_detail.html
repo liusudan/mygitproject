@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!--引入boot的文件，引入顺序有要求-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/footer.css"/>
+    <link rel="stylesheet" href="css/product_detail.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/product_detail.js"></script>
+</head>
+<body>
+<header>
+    <div class="container-fluid header-bg">
+        <div class="row">
+            <div class="col-md-3 d-none d-md-block d-lg-block">
+                <ul class="list-unstyled ml-md-3 ">
+                    <li>中文</li>
+                    <li>帮助</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-11 col-10 text-center">
+                <img src="img/header/logo2.png">
+            </div>
+            <div class="col-md-3 d-none d-md-block d-lg-block position-relative">
+                <ul class="list-unstyled d-flex pt-2 justify-content-sm-end">
+                    <li class="mr-2"><a href="login.html">登录</a></li>
+                    <li class="mr-2"><a href="javascript:;">购物袋</a></li>
+                    <li class="mr-2 search"><a href="javascript:;">搜索</a></li>
+                </ul>
+                <div id='search' class="pt-2">
+                    <input type="text" placeholder="搜素框">
+                    <a href="javascript:;"><img src="img/header/search.png" alt=""></a>
+                </div>
+            </div>
+            <div class="d-md-none" id="item_col"><button class="navbar-light d-md-none"><span class="navbar-toggler-icon"></span></button></div>
+        </div>
+        <div class="d-flex justify-content-md-center b-nav " id="item_show">
+            <ul class="list-unstyled d-md-flex mr-md-5 ul_mg">
+                <li class="bg-li mr-md-4"><a href="index.html">首页</a></li>
+                <li class="bg-li mr-md-4"><a href="javascript:;">所有宝贝 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2 ml-md-4"><a href="javascript:;">连衣裙 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">阔腿裤 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">连体裤 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">套装 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">上衣 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">下装 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">配饰</a></li>
+                <li class="bg-li ml-md-5"><a href="javascript:;">品牌故事</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ms_login d-md-none d-lg-none d-block text-right" style="background: #f7f7f7;height: 30px;text-decoration: none"><a class="mr-2" href="login.html"><img width="23px" src="img/index/login.png" alt=""/> </a><a class="mr-2" href="javascript:;"> <img width="23px" src="img/index/cart1.png" alt=""/></a></div>
+</header>
+<section>
+        <div class="detail_img">
+            <img src="img/product_detail/p0.jpg" alt=""/>
+            <img src="img/product_detail/p1.jpg" alt=""/>
+            <img src="img/product_detail/p2.jpg" alt=""/>
+            <img src="img/product_detail/p5.jpg" alt=""/>
+            <img src="img/product_detail/p3.jpg" alt=""/>
+        </div>
+        <div class="detail_pro">
+         <div class="datail_pro_dt">
+             <table></table>
+             <div class="detail_ms">
+                 <div id="parent">
+                     <div class="card">
+                         <div class="card-header"><a href="#part1" data-toggle="collapse" class="p_color">产品细节</a></div>
+                         <div class="collapse" id="part1" data-parent="#parent">
+                             <div class="card-body active_color">
+                                 <div class="w-50">
+                                     花呢材质彰显女性的柔美气质，在2019早春系列中，以内在精髓演绎出多种款式，从经典廓形到别出心裁的当代造型不一而足。这款短款连衣裙采用无衬里设计，白色滚边彰显对比美感，装饰性复古纽扣让经典款型更显精致。可拆卸链式腰带上点缀虎头造型，配以水晶和彩色珐琅，致意Hattie Carnegie打造的复古胸针，这位传奇珠宝时尚设计师在1920-1950年代炙手可热
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="card">
+                         <div class="card-header"><a href="#part2" data-toggle="collapse" class="card-link p_color">配送信息</a></div>
+                         <div class="collapse" id="part2" data-parent="#parent">
+                             <div class="card-body active_color">
+                                 <div class="w-50">部分城市支持当日达、次日达；当日达请于当日9：30前提交订单并于10：00前完成支付，次日达请于当日15：30点前提交订单并于16：00前完成支付。支持顺丰速运，部分偏远地区支持EMS。</div></div>
+                         </div></div>
+                     <div class="card">
+                         <div class="card-header"><a href="#part3" data-toggle="collapse" class="p_color">礼品包装</a></div>
+                         <div class="collapse show" id="part3" data-parent="#parent">
+                             <div class="card-body">
+                                 <div class="w-75">
+                                 <div class="w-100">
+                                     <img class="box_img" src="img/product_detail/box.jpg" alt=""/>
+                                     <img class="box_img" src="img/product_detail/box2.jpg" alt=""/>
+                                 </div>
+                                 <p class="text-center pt-3">免费礼品包装</p>
+                                 <p class="active_color text-center">此商品将会以标准礼品包装寄送</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="fix_cart">
+                 <h4 class="p_title">度假复古吊带格子上衣荷叶边半身裙</h4>
+                 <p class="p_price">￥288.00</p>
+                 <p class="p_chose">请选择合适的尺寸：</p>
+                 <div class="p_size">
+                     <a href="javascript:;" class="active">XS</a>
+                     <a href="javascript:;">S</a>
+                     <a href="javascript:;">M</a>
+                     <a href="javascript:;">L</a>
+                     <a href="javascript:;">XL</a>
+                 </div>
+                 <div><input type="button" value="加入购物车" class="p_btn"/></div>
+                 <div class="s_icon"><img src="img/product_detail/msg.png" alt=""/><span>在线顾问</span><span class="padding_l"> |</span><img src="img/product_detail/tel.png" alt=""/><span>选购咨询</span></div>
+                 <div class="s_icon"><span>分享：</span><img src="img/product_detail/wechat.png" alt=""/><img src="img/product_detail/weibo.png" alt=""/></div>
+                 <p class="p_last">选择标准配送，免运费</p>
+             </div>
+         </div>
+            <div class="footer-bg pb-5 mt-5">
+                <div class="container">
+                    <div class="text-center mb-3"><img src="img/footer/logo_g.png" class="img_size "/></div>
+                    <div class="row">
+                        <div class="col-md-9 d-md-flex justify-content-md-between">
+                            <ul class="list-unstyled">
+                                <li class="li_title" id="fir">专属服务</li>
+                                <li class="li_d mt-4">免费标准配送</li>
+                                <li class="li_d">免费礼品包装</li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li class="li_title">购物帮助</li>
+                                <li class="li_d mt-4">支付相关</li>
+                                <li class="li_d">配送</li>
+                                <li class="li_d">退货</li>
+                                <li class="li_d">发票</li>
+                                <li class="li_d">保养与维修</li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li class="li_title">关于公司</li>
+                                <li class="li_d mt-4">关于SINCE THEN</li>
+                                <li class="li_d">职业发展</li>
+                                <li class="li_d">细则与条款</li>
+                                <li class="li_d">隐私与COOKIE</li>
+                                <li class="li_d">企业信息</li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li class="li_title" >关注我们</li>
+                                <li class="li_d mt-4"><img src="" alt=""/>微信</li>
+                                <li class="li_d"><img src="" alt=""/>微博</li>
+                                <li class="li_d"><img src="" alt=""/>优酷</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="ml-md-5">
+                                <p class="li_title">订阅电子资讯</p>
+                                <p class="li_d mt-md-4">通过订阅，即代表您接受本公司的隐私条款</p>
+                                <input class="li_d" type="text" placeholder="电子邮件地址"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,84 @@
+.header-bg{
+    background: #333;
+
+    color: #bababa;
+}
+.header-bg a{
+    text-decoration: none;
+    color: #bababa;
+}
+.header-bg .b-nav a{
+    text-decoration: none;
+    color: #bababa;
+    font-size: 18px;
+    font-family: "µ»œﬂ";
+    font-weight: 400;
+}
+@media (max-width: 991px ){
+    .header-bg .b-nav a{
+        font-size: 1rem;
+    }
+}
+@media  (min-width: 768px){
+    .header-bg{
+        height: 100px;
+    }
+    .header-bg div.ms_login{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .ul_mg{
+        margin-left:8%;
+    }
+    #item_show{
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.7s;
+    }
+    .header-bg{
+        height: 60px;
+        transition: height 0.5s;
+    }
+    .header-bg div.ms_login{
+        display: block;
+    }
+}
+.header-bg .b-nav a:hover{
+    color:#fff;
+}
+.header-bg #search{
+    position: absolute;
+    z-index: 10;
+    top:0px;
+    right:18px;
+    display: none;
+    transition: all 2s;
+}
+@keyframes inputDown {
+    0%{
+        width:20px;
+    }
+    100%{
+       width: 200px;
+    }
+}
+.header-bg #search input{
+    outline-style: none;
+    background:#333;
+    height: 30px;
+    border-radius: 15px;
+    border:2px solid #bababa;
+    padding-left: 10px;
+    animation:inputDown 1s ;
+}
+.header-bg #search img{
+    position: absolute;
+    width:28px;
+    right: 9px;
+    top: 10px;
+}
+.header-bg .ms_login a{
+    text-decoration: none;
+}
+

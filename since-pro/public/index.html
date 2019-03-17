@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SINCETHEN半糖少女潮人馆</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!--引入boot的文件，引入顺序有要求-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css"/>
+</head>
+<body>
+<header>
+    <div class="container-fluid header-bg">
+        <div class="row">
+            <div class="col-md-3 d-none d-md-block d-lg-block">
+                <ul class="list-unstyled ml-md-3 ">
+                    <li>中文</li>
+                    <li>帮助</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-11 col-10 text-center">
+                <img src="img/header/logo2.png">
+            </div>
+            <div class="col-md-3 d-none d-md-block d-lg-block position-relative">
+                <ul class="list-unstyled d-flex pt-2 justify-content-sm-end">
+                    <li class="mr-2" id="btn_login"><a href="login.html" >登录</a></li>
+                    <li class="mr-2"><a href="cart.html">购物袋</a></li>
+                    <li class="mr-2 search"><a href="javascript:;">搜索</a></li>
+                </ul>
+                <div id='search' class="pt-2">
+                    <input type="text" placeholder="搜素框">
+                    <a href="javascript:;"><img src="img/header/search.png" alt=""></a>
+                </div>
+            </div>
+            <div class="d-md-none" id="item_col"><button class="navbar-light d-md-none"><span class="navbar-toggler-icon"></span></button></div>
+        </div>
+        <div class="d-flex justify-content-md-center b-nav " id="item_show">
+            <ul class="list-unstyled d-md-flex mr-md-5 ul_mg">
+                <li class="bg-li mr-md-4"><a href="index.html">首页</a></li>
+                <li class="bg-li mr-md-4"><a href="product_list.html?lid=">所有宝贝 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2 ml-md-4"><a href="product_list.html?lid=2">连衣裙 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="product_list.html?lid=3">阔腿裤 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="product_list.html?lid=4">连体裤 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="product_list.html?lid=1">套装 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="product_list.html?lid=5">上衣 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="">下装 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">配饰</a></li>
+                <li class="bg-li ml-md-5"><a href="javascript:;">品牌故事</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ms_login d-md-none d-lg-none d-flex justify-content-between" style="background: #f7f7f7;height: 30px;text-decoration: none">
+        <div id="btn_login2">
+            <a class="ml-2" href="login.html"><img width="23px"src="img/index/login.png" alt=""/> </a>
+        </div>
+        <div>
+            <a class="mr-2" href="javascript:;"> <img width="23px" src="img/index/cart1.png" alt=""/></a>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container-fluid">
+        <div class="bg_img"><img src="img/index/title3.jpg" alt="" class=""></div>
+        <div class="main">
+        <div class="bg_mask"></div>
+        <div class="m_content w-100">
+            <div class="m_bg bg1"><a href="product_list.html?lid=2"><img src="img/index/d4.jpg" alt=""></a></div>
+            <div class="goods_list">
+                <div class="goods_list_t">
+                    <div class="goods_list_l">
+                    <div>
+                        <div class="img_to1">
+                        <img src="img/index/con1.png">
+                        </div>
+                        <div class="img_to2 img_to">
+                          <img src="img/index/con2.png" alt="">
+                            <a class="img_mask" href="product_detail.html?pid=30"><span>￥189.00</span><span>点击购买</span></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img_to3 img_to">
+                          <img src="img/index/con4.png" alt="">
+                            <a class="img_mask" href="product_detail.html?pid=31"><span>￥289.00</span><span>点击购买</span></a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="goods_list_r">
+                       <div class="img_to4 img_to">
+                        <img src="img/index/con3.png" alt="">
+                           <a class="img_mask" href="product_detail.html?pid=32"><span>￥245.00</span><span>点击购买</span></a>
+                    </div>
+                    </div>
+                </div>
+                <div class="goods_list_b">
+                    <div class="img_to5 img_to">
+                        <img src="img/index/con5.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=33"><span>￥256.00</span><span>点击购买</span></a>
+                    </div>
+                    <div class="img_to6 img_to">
+                        <img src="img/index/con6.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=34"><span>￥189.00</span><span>点击购买</span></a>
+                    </div>
+                    <div class="img_to7 img_to">
+                        <img src="img/index/con7.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=35"><span>￥199.00</span><span>点击购买</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="m_bg bg2"><a href="product_list.html?lid=3"><img src="img/index/d3.jpg" alt=""></a></div>
+            <div class="goods_list">
+                <div class="goods_list_t">
+                    <div class="goods_list_l">
+                        <div>
+                            <div class="img_to1">
+                                <img src="img/index/con1.png">
+                            </div>
+                            <div class="img_to2 img_to">
+                                <img src="img/index/2_con2.png" alt="">
+                                <a class="img_mask" href="product_detail.html?pid=36"><span>￥245.00</span><span>点击购买</span></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="img_to3 img_to">
+                                <img src="img/index/2_con4.png" alt="">
+                                <a class="img_mask" href="product_detail.html?pid=38"><span>￥243.00</span><span>点击购买</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods_list_r">
+                        <div class="img_to4 img_to">
+                            <img src="img/index/2_con3.png" alt="">
+                            <a class="img_mask" href="product_detail.html?pid=37"><span>￥188.00</span><span>点击购买</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="goods_list_b">
+                    <div class="img_to5 img_to">
+                        <img src="img/index/2_con5.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=39"><span>￥169.00</span><span>点击购买</span></a>
+                    </div>
+                    <div class="img_to6 img_to">
+                        <img src="img/index/2_con6.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=40"><span>￥258.00</span><span>点击购买</span></a>
+                    </div>
+                    <div class="img_to7 img_to">
+                        <img src="img/index/2_con7.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=41"><span>￥199.00</span><span>点击购买</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="m_bg bg4"><a href="product_list.html?lid=1"><img src="img/index/d2.jpg" alt=""></a></div>
+            <div class="goods_list">
+                <div class="goods_list_t">
+                    <div class="goods_list_l">
+                        <div>
+                            <div class="img_to1">
+                                <img src="img/index/con1.png">
+                            </div>
+                            <div class="img_to2 img_to">
+                                <img src="img/index/3_con2.png" alt="">
+                                <a class="img_mask" href="product_detail.html?pid=26"><span>￥356.00</span><span>点击购买</span></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="img_to3 img_to">
+                                <img src="img/index/3_con4.png" alt="">
+                                <a class="img_mask" href="product_detail.html?pid=27"><span>￥421.00</span><span>点击购买</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods_list_r">
+                        <div class="img_to4 img_to">
+                            <img src="img/index/3_con3.png" alt="">
+                            <a class="img_mask" href="product_detail.html?pid=28"><span>￥325.00</span><span>点击购买</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="goods_list_b">
+                    <div class="img_to5 img_to">
+                        <img src="img/index/3_con5.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=3"><span>￥256.00</span><span>点击购买</span></a>
+                    </div>
+                    <div class="img_to6 img_to">
+                        <img src="img/index/3_con6.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=22"><span>￥269.00</span><span>点击购买</span></a>
+                    </div>
+                    <div class="img_to7 img_to">
+                        <img src="img/index/3_con7.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=29"><span>￥256.00</span><span>点击购买</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="m_bg bg5"><a href="product_list.html?lid=4"><img src="img/index/d5.jpg" alt=""></a></div>
+            <div class="goods_list">
+                <div class="goods_list_t">
+                    <div class="goods_list_l">
+                        <div>
+                            <div class="img_to1">
+                                <img src="img/index/con1.png">
+                            </div>
+                            <div class="img_to2 img_to">
+                                <img src="img/index/4_con2.png" alt="">
+                                <a class="img_mask" href="product_detail.html?pid=42"><span>￥188.00</span><span>点击购买</span></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="img_to3 img_to">
+                                <img src="img/index/4_con4.png" alt="">
+                                <a class="img_mask" href="product_detail.html?pid=43"><span>￥254.00</span><span>点击购买</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods_list_r">
+                        <div class="img_to4 img_to">
+                            <img src="img/index/4_con3.png" alt="">
+                            <a class="img_mask" href="product_detail.html?pid=44"><span>￥214.00</span><span>点击购买</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="goods_list_b">
+                    <div class="img_to5 img_to">
+                        <img src="img/index/4_con5.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=45"><span>￥231.00</span><span>点击购买</span></a>
+                    </div>
+                    <div class="img_to6 img_to">
+                        <img src="img/index/4_con6.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=46"><span>￥247.00</span><span>点击购买</span></a>
+                    </div>
+                    <div class="img_to7 img_to">
+                        <img src="img/index/4_con7.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=47"><span>￥268.00</span><span>点击购买</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="m_bg bg3"><a href="product_list.html?lid=5"><img src="img/index/d7.jpg" alt=""></a></div>
+            <div class="goods_list">
+                <div class="goods_list_t">
+                    <div class="goods_list_l">
+                        <div>
+                            <div class="img_to1">
+                                <img src="img/index/con1.png">
+                            </div>
+                            <div class="img_to2 img_to">
+                                <img src="img/index/5_con2.png" alt="">
+                                <a class="img_mask" href="product_detail.html?pid=48"><span>￥358.00</span><span>点击购买</span></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="img_to3 img_to">
+                                <img src="img/index/5_con4.png" alt="">
+                                <a class="img_mask" href="product_detail.html?pid=50"><span>￥369.00</span><span>点击购买</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods_list_r">
+                        <div class="img_to4 img_to">
+                            <img src="img/index/5_con3.png" alt="">
+                            <a class="img_mask" href="product_detail.html?pid=49"><span>￥421.00</span><span>点击购买</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="goods_list_b">
+                    <div class="img_to5 img_to">
+                        <img src="img/index/5_con5.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=51"><span>￥258.00</span><span>点击购买</span></a>
+                    </div>
+                    <div class="img_to6 img_to">
+                        <img src="img/index/5_con6.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=52"><span>￥425.00</span><span>点击购买</span></a>
+                    </div>
+                    <div class="img_to7 img_to">
+                        <img src="img/index/5_con7.png" alt="">
+                        <a class="img_mask" href="product_detail.html?pid=53"><span>￥345.00</span><span>点击购买</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bg pb-5 mt-5">
+                <div class="container">
+                    <div class="text-center mb-3"><img src="img/footer/logo_g.png" class="img_size "/></div>
+                    <div class="row">
+                        <div class="col-md-9 d-md-flex justify-content-md-between">
+                            <ul class="list-unstyled">
+                                <li class="li_title" id="fir">专属服务</li>
+                                <li class="li_d mt-4">免费标准配送</li>
+                                <li class="li_d">免费礼品包装</li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li class="li_title">购物帮助</li>
+                                <li class="li_d mt-4">支付相关</li>
+                                <li class="li_d">配送</li>
+                                <li class="li_d">退货</li>
+                                <li class="li_d">发票</li>
+                                <li class="li_d">保养与维修</li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li class="li_title">关于公司</li>
+                                <li class="li_d mt-4">关于SINCE THEN</li>
+                                <li class="li_d">职业发展</li>
+                                <li class="li_d">细则与条款</li>
+                                <li class="li_d">隐私与COOKIE</li>
+                                <li class="li_d">企业信息</li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li class="li_title" >关注我们</li>
+                                <li class="li_d mt-4"><img src="" alt=""/>微信</li>
+                                <li class="li_d"><img src="" alt=""/>微博</li>
+                                <li class="li_d"><img src="" alt=""/>优酷</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="ml-md-5">
+                                <p class="li_title">订阅电子资讯</p>
+                                <p class="li_d mt-md-4">通过订阅，即代表您接受本公司的隐私条款</p>
+                                <input class="li_d" type="text" placeholder="电子邮件地址"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg_up">
+            <p>2019早春</p>
+            <div>
+                <a href="javascript:;">女士礼品</a>
+                <a href="javascript:;">男士礼品</a>
+                <div class="cont_logo"><img src="img/header/logo2.png"></div>
+            </div>  
+        </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!--引入boot的文件，引入顺序有要求-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/footer.css"/>
+    <link rel="stylesheet" href="css/login.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body class="w-100">
+<header>
+    <div class="container-fluid header-bg">
+        <div class="row">
+            <div class="col-md-3 d-none d-md-block d-lg-block">
+                <ul class="list-unstyled ml-md-3 ">
+                    <li>中文</li>
+                    <li>帮助</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-11 col-10 text-center">
+                <img src="img/header/logo2.png">
+            </div>
+            <div class="col-md-3 d-none d-md-block d-lg-block position-relative">
+                <ul class="list-unstyled d-flex pt-2 justify-content-sm-end">
+                    <li class="mr-2"><a href="login.html">登录</a></li>
+                    <li class="mr-2"><a href="javascript:;">购物袋</a></li>
+                    <li class="mr-2 search"><a href="javascript:;">搜索</a></li>
+                </ul>
+                <div id='search' class="pt-2">
+                    <input type="text" placeholder="搜素框">
+                    <a href="javascript:;"><img src="img/header/search.png" alt=""></a>
+                </div>
+            </div>
+            <div class="d-md-none" id="item_col"><button class="navbar-light d-md-none"><span class="navbar-toggler-icon"></span></button></div>
+        </div>
+        <div class="d-flex justify-content-md-center b-nav " id="item_show">
+            <ul class="list-unstyled d-md-flex mr-md-5 ul_mg">
+                <li class="bg-li mr-md-4"><a href="index.html">首页</a></li>
+                <li class="bg-li mr-md-4"><a href="javascript:;">所有宝贝 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2 ml-md-4"><a href="javascript:;">连衣裙 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">阔腿裤 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">连体裤 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">套装 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">上衣 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">下装 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">配饰</a></li>
+                <li class="bg-li ml-md-5"><a href="javascript:;">品牌故事</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ms_login d-md-none d-lg-none d-block text-right" style="background: #f7f7f7;height: 30px;text-decoration: none"><a class="mr-2" href="login.html"><img width="23px" src="img/index/login.png" alt=""/> </a><a class="mr-2" href="javascript:;"> <img width="23px" src="img/index/cart1.png" alt=""/></a></div>
+</header>
+<section>
+    <div class="bgcolor">
+        <h2>登录</h2>
+        <div class="space-login d-md-flex">
+            <div class="space-login-l">
+                <div>
+                    <p>用户名/电子邮箱</p>
+                    <input class="com-color" type="text"/>
+                    <p class="err-style">请输入用户名/电子邮箱</p>
+                </div>
+                <div>
+                    <p>密码</p>
+                    <input class="com-color" type="password"/>
+                    <p class="err-style">请输入密码！</p>
+                </div>
+                <div><input class="eck-color"type="checkbox"/> 记住我</div>
+                <input class="btn-color" type="button" value="登录">
+                <p class="text-center">忘记密码？</p>
+            </div>
+            <div class="space-login-r">
+                <h3>没有账号？</h3>
+                <p>拥有SINCE THEN 账号您将拥有以下权利：</p>
+                <ul>
+                    <li>保存您的心愿清单</li>
+                    <li>个性化您的推荐内容</li>
+                    <li>订单寄送追踪及退换货管理</li>
+                </ul>
+                <input class="btn-cre" type="button" value="创建账号"/>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="footer-bg pb-5 mt-5">
+    <div class="container">
+        <div class="text-center mb-3"><img src="img/footer/logo_g.png" class="img_size "/></div>
+        <div class="row">
+            <div class="col-md-9 d-md-flex justify-content-md-between">
+                <ul class="list-unstyled">
+                    <li class="li_title" id="fir">专属服务</li>
+                    <li class="li_d mt-4">免费标准配送</li>
+                    <li class="li_d">免费礼品包装</li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li class="li_title">购物帮助</li>
+                    <li class="li_d mt-4">支付相关</li>
+                    <li class="li_d">配送</li>
+                    <li class="li_d">退货</li>
+                    <li class="li_d">发票</li>
+                    <li class="li_d">保养与维修</li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li class="li_title">关于公司</li>
+                    <li class="li_d mt-4">关于SINCE THEN</li>
+                    <li class="li_d">职业发展</li>
+                    <li class="li_d">细则与条款</li>
+                    <li class="li_d">隐私与COOKIE</li>
+                    <li class="li_d">企业信息</li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li class="li_title" >关注我们</li>
+                    <li class="li_d mt-4"><img src="" alt=""/>微信</li>
+                    <li class="li_d"><img src="" alt=""/>微博</li>
+                    <li class="li_d"><img src="" alt=""/>优酷</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="ml-md-5">
+                    <p class="li_title">订阅电子资讯</p>
+                    <p class="li_d mt-md-4">通过订阅，即代表您接受本公司的隐私条款</p>
+                    <input class="li_d" type="text" placeholder="电子邮件地址"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space-sign">
+    <div class="space-out">
+        <img width="30px" class="float-right" id="close" src="img/login/close.png" alt=""/>
+        <h3 class="text-center p-4">创建您的账户</h3>
+        <div>
+            <p>用户名</p>
+            <input class="txt-btn" type="text"/>
+            <p>电子邮箱</p>
+            <input class="txt-btn" type="email"/>
+            <p>设置密码</p>
+            <input class="txt-btn" type="password"/>
+            <p>确认密码</p>
+            <input class="txt-btn" type="password"/>
+            <div>
+                <input class="eck-btn" type="checkbox"/> 创建帐号代表您已接受Gucci的隐私政策和销售条款
+            </div>
+            <div class="text-center mt-3"><input type="button" value="创建账户" id="create-id"/></div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!--引入boot的文件，引入顺序有要求-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/footer.css"/>
+    <link rel="stylesheet" href="css/cart.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/cart.js"></script>
+</head>
+<body class="w-100">
+<header>
+    <div class="container-fluid header-bg">
+        <div class="row">
+            <div class="col-md-3 d-none d-md-block d-lg-block">
+                <ul class="list-unstyled ml-md-3 ">
+                    <li>中文</li>
+                    <li>帮助</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-11 col-10 text-center">
+                <img src="img/header/logo2.png">
+            </div>
+            <div class="col-md-3 d-none d-md-block d-lg-block position-relative">
+                <ul class="list-unstyled d-flex pt-2 justify-content-sm-end">
+                    <li class="mr-2" id="btn_login"><a href="login.html" >登录</a></li>
+                    <li class="mr-2"><a href="cart.html">购物袋</a></li>
+                    <li class="mr-2 search"><a href="javascript:;">搜索</a></li>
+                </ul>
+                <div id='search' class="pt-2">
+                    <input type="text" placeholder="搜素框">
+                    <a href="javascript:;"><img src="img/header/search.png" alt=""></a>
+                </div>
+            </div>
+            <div class="d-md-none" id="item_col"><button class="navbar-light d-md-none"><span class="navbar-toggler-icon"></span></button></div>
+        </div>
+        <div class="d-flex justify-content-md-center b-nav " id="item_show">
+            <ul class="list-unstyled d-md-flex mr-md-5 ul_mg">
+                <li class="bg-li mr-md-4"><a href="index.html">首页</a></li>
+                <li class="bg-li mr-md-4"><a href="product_list.html?lid=">所有宝贝 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2 ml-md-4"><a href="product_list.html?lid=2">连衣裙 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="product_list.html?lid=3">阔腿裤 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="product_list.html?lid=4">连体裤 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="product_list.html?lid=1">套装 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="product_list.html?lid=5">上衣 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">下装 </a></li>
+                <li class="bg-li mr-lg-3 mr-md-2"><a href="javascript:;">配饰</a></li>
+                <li class="bg-li ml-md-5"><a href="javascript:;">品牌故事</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ms_login d-md-none d-lg-none d-flex justify-content-between" style="background: #f7f7f7;height: 30px;text-decoration: none">
+        <div id="btn_login2">
+            <a class="ml-2" href="login.html"><img width="23px"src="img/index/login.png" alt=""/> </a>
+        </div>
+        <div>
+            <a class="mr-2" href="javascript:;"> <img width="23px" src="img/index/cart1.png" alt=""/></a>
+        </div>
+    </div>
+</header>
+<section>
+<div class="container">
+<div class="row">
+  <div id="cart_l" class="col-md-8 col-ld-8 col-12">
+    <div class="none_show">
+        <p>您的购物车空空如也</p>
+        <a id="add_btn" href="index.html">继续购物</a>
+    </div>
+  
+    <div class="has_show">
+        <!--
+        <p><input type="checkbox" id="checkall"> 全选</p>
+        <div class="cart_border">
+            <div class="d-flex justify-content-left">
+                <input type="checkbox" class="cart_check" data-set="">
+                <div class="cart_img"><img src="img/product_list/d1.jpg" alt=""></div>
+                <div class="cart_detail">
+                    <h5>海边两件套度假短裤</h5>
+                    <p class="pt-2 pb-2 size">尺码：S</p>
+                    <p>有货</p>
+                    <p>预计发货后2-4个工作日送达</p>
+                    <div class="mt-md-4 mt-ld-4 mt-1 cart_btn"><button>-</button><span>1</span><button>+</button></div>
+                </div>
+            </div>
+            <div>
+                <a href="javascript:;">移除</a>
+            </div>
+            <div>
+                <span>￥256.00</span>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between cart_border">
+                <div class="d-flex justify-content-left">
+                    <input type="checkbox">
+                    <div class="cart_img"><img src="img/product_list/d1.jpg" alt=""></div>
+                    <div class="cart_detail">
+                        <h5>海边两件套度假短裤</h5>
+                        <p class="pt-2 pb-2 size">尺码：S</p>
+                        <p>有货</p>
+                        <p>预计发货后2-4个工作日送达</p>
+                        <div class="mt-md-4 mt-ld-4 mt-1 cart_btn"><button>-</button><span>1</span><button>+</button></div>
+                    </div>
+                </div>
+                <div>
+                    <a href="javascript:;">移除</a>
+                </div>
+                <div>
+                    <span>￥256.00</span>
+                </div>
+            </div>
+         -->
+    </div>  
+   
+  </div>
+  <div id="cart_r" class="col-md-4 col-ld-4 col-12">
+    <div class="cart_r_bg show_t">
+        <div>
+        <div class="d-flex justify-content-between"><span class="font_color_l">订单小计</span><span class="font_color_d">已选0件商品</span></div>
+        <hr>
+        <div class="d-flex justify-content-between mb-2 "><span class="font_color_d ">商品总计</span><span class="font_color_l totalmoney">￥0</span></div>
+        <div class="d-flex justify-content-between mb-2 "><span class="font_color_d">运费</span><span class="font_color_l">免费</span></div>
+        <div class="d-flex justify-content-between mb-2 "><span class="font_color_d ">总计</span><span class="font_color_l totalmoney">￥0</span></div>
+        <hr>
+        <p class="font_color_l ">说明</p>
+        <p class="font_color_l font_say">订单提交之后1小时内未付款，订单将被系统自动取消，请您尽快完成支付以确保商品能及时送达，有货商品和门店配货商品是分开寄出。</p>
+        <hr>
+        <div class="cart_btn"><input type="button" value="立即结算" id="btn_pay"></div> 
+        <div class="cart_btn"><a href="index.html" id="btn_addcart">继续购物</a> 
+        </div>
+    </div>
+    </div>
+    <div class="cart_r_bg show_b">
+        <h2>免费配送</h2>
+        <div class="cart_title">需要帮助 <div><img src="img/cart/plus.png" alt=""></div></div>
+        <ul class="cart_titel_hidden">
+            <li><img src="img/cart/msg.png">在线顾问</li>
+            <li><img src="img/cart/tel.png">450 1820 456</li>
+            <li><img src="img/cart/email.png">sincethen@163.com</li>
+        </ul>
+        <div class="cart_title">支付方式 <div><img src="img/cart/plus.png" alt=""></div></div>
+        <ul class="cart_titel_hidden">
+            <li><p>支持支付宝支付、微信支付和货到付款</p></li>
+            <li><img src="img/cart/pay2.png">支付宝</li>
+            <li><img src="img/cart/pay1.png">微信支付</li>
+            <li><img src="img/cart/pay3.png">货到付款</li>
+        </ul>
+        <div class="cart_title">礼品包装 <div><img src="img/cart/plus.png" alt=""></div></div>
+        <div class="cart_titel_hidden">
+            <p>免费礼品包装</p>
+            <img class="w-25 pb-3" src="img/cart/box.jpg">
+        </div>
+        <div class="cart_title">配送方式 <div><img src="img/cart/plus.png" alt=""></div></div>
+        <div class="cart_titel_hidden">
+            <p class="pb-3">支持顺丰快递，部分偏远地区支持EMS，敬请原谅</p>
+        </div>
+        <div class="cart_title">退换货政策 <div><img src="img/cart/plus.png" alt=""></div></div>
+        <div class="cart_titel_hidden">
+            <p class="pb-3">SINCE THEN官网提供14天轻松退换货服务</p>
+        </div>
+    </div>
+  </div> 
+</div>
+</div>
+</section>
+<div class="footer-bg pb-5 mt-5">
+    <div class="container">
+        <div class="text-center mb-3"><img src="img/footer/logo_g.png" class="img_size "/></div>
+        <div class="row">
+            <div class="col-md-9 d-md-flex justify-content-md-between">
+                <ul class="list-unstyled">
+                    <li class="li_title" id="fir">专属服务</li>
+                    <li class="li_d mt-4">免费标准配送</li>
+                    <li class="li_d">免费礼品包装</li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li class="li_title">购物帮助</li>
+                    <li class="li_d mt-4">支付相关</li>
+                    <li class="li_d">配送</li>
+                    <li class="li_d">退货</li>
+                    <li class="li_d">发票</li>
+                    <li class="li_d">保养与维修</li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li class="li_title">关于公司</li>
+                    <li class="li_d mt-4">关于SINCE THEN</li>
+                    <li class="li_d">职业发展</li>
+                    <li class="li_d">细则与条款</li>
+                    <li class="li_d">隐私与COOKIE</li>
+                    <li class="li_d">企业信息</li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li class="li_title" >关注我们</li>
+                    <li class="li_d mt-4"><img src="" alt=""/>微信</li>
+                    <li class="li_d"><img src="" alt=""/>微博</li>
+                    <li class="li_d"><img src="" alt=""/>优酷</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="ml-md-5">
+                    <p class="li_title">订阅电子资讯</p>
+                    <p class="li_d mt-md-4">通过订阅，即代表您接受本公司的隐私条款</p>
+                    <input class="li_d" type="text" placeholder="电子邮件地址"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

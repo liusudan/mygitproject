@@ -1,0 +1,188 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+section{
+    background: #fff;
+    margin: 0 auto;
+}
+section .bgcolor{
+    width: 98%;
+    background: #e9ecef;
+    margin: 18px auto;
+}
+section .bgcolor .space-login{
+    margin: 0 auto;
+    height: 500px;
+    width:750px ;
+    border-top: 1px solid #b9bbbe;
+}
+section .bgcolor .space-login .space-login-l{
+    width: 345px;
+    margin-left: 30px;
+    height: 300px;
+    color: #333333;
+    font-size: 15px;
+    margin-top: 40px;
+    border-right: 1px solid #fff;
+}
+section .bgcolor .space-login .space-login-r{
+    margin-left: 30px;
+    height: 300px;
+    color: #333333;
+    font-size: 15px;
+    margin-top: 40px;
+    letter-spacing: 1px;
+}
+section .bgcolor .space-login .space-login-r h3{
+    font-size: 26px;
+    font-weight: 400;
+    padding: 10px 0;
+}
+section .bgcolor .space-login .space-login-r ul{
+    margin-left: 20px;
+    font-size: 13px;
+    color: #6c757d;
+}
+section .bgcolor .space-login .space-login-r ul li{
+    margin-bottom: 12px;
+}
+section .bgcolor .space-login .space-login-r .btn-cre{
+    margin-top: 10px;
+    width: 230px;
+    height: 42px;
+    background:#e9ecef;
+    border: 2px solid #333333;
+}
+section .bgcolor .space-login .space-login-r .btn-cre:hover{
+    opacity: 0.5;
+}
+section .bgcolor .space-login .space-login-l p{
+    padding: 10px 0;
+    margin: 0px;
+    width: 90%;
+}
+section .bgcolor .space-login .space-login-l input.com-color{
+    width: 90%;
+    height: 36px;
+    border: none;
+    padding-left: 6px;
+}
+section .bgcolor .space-login .space-login-l input.eck-color{
+    margin-top: 20px;
+    margin-bottom: 15px;
+
+}
+section .bgcolor .space-login .space-login-l input.btn-color{
+    width: 90%;
+    height: 42px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    margin-top: 20px;
+
+}
+section .bgcolor .space-login .space-login-l input.btn-color:hover{
+    background: #333333;
+}
+section h2{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: inherit;
+    font-weight: 400;
+    font-family: "Hiragino Sans GB";
+    letter-spacing:4px;
+    padding: 30px;
+}
+section .bgcolor .space-login .space-login-l p.err-style{
+    color: crimson;
+    font-size: 12px;
+    display: none;
+}
+section .bgcolor .space-login .space-login-l #err_login{
+    display: none;;
+}
+body .space-sign{
+    position: fixed;
+    width: 100%;
+    height:100% ;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,0.6);
+    z-index:10;
+    display: none;
+}
+.space-sign .space-out{
+    margin:0 auto;
+    width: 600px;
+    padding: 20px;
+    background: #fff;
+    margin-top:150px;
+    font-size: 12px;
+}
+.space-sign .space-out h3{
+    border-bottom: 1px solid #dae0e5;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.space-sign .space-out p{
+
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 15%;
+}
+.space-sign .space-out input.txt-btn{
+    margin-left: 15%;
+    height: 38px;
+    width: 70%;
+    background: #eee;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+.space-sign .space-out .eck-btn{
+    margin-left: 15%;
+    margin-top: 20px;
+}
+.space-sign .space-out #create-id{
+    width: 130px;
+    height: 38px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+}
+.space-sign .space-out #create-id:hover{
+    background: #333;
+}
+@media (max-width: 768px) {
+    section .bgcolor .space-login{
+        height: 700px;
+        width: 100%;
+    }
+    section .bgcolor .space-login .space-login-l{
+        width: 100%;
+        border: none;
+        margin-left: 5%;
+    }
+    section .bgcolor .space-login .space-login-r h3{
+        text-align: center;
+    }
+    section .bgcolor .space-login .space-login-r .btn-cre{
+        width: 94%;
+    }
+    .space-sign .space-out{
+        width:350px;
+        margin-top: 100px;
+    }
+    .space-sign .space-out .eck-btn,.space-sign .space-out p {
+        margin-left: 3%;
+    }
+    .space-sign .space-out input.txt-btn{
+        margin-left: 3%;
+        width: 90%;
+    }
+}
